@@ -1,8 +1,21 @@
-<header>
-  <% if signed_in? %>
-    Signed in as: <%= current_user.email %>
-    <%= link_to 'Sign out', sign_out_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign in', sign_in_path %>
-  <% end %>
+<header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "Shoutr", root_path, class: "navbar-brand" %>
+    </div>
+    <!-- /.navbar-header -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item "><%= link_to "Home", root_path, class: "nav-link" %></li>
+        <li class="nav-item">
+          <%= link_to current_user.email, user_path(current_user), class: "nav-link" %>
+        </li>
+        <!-- /.nav-item -->
+        <li class="nav-item"> <%= session_link %> </li>
+      </ul>
+      <!-- /.navbar-nav mr-auto -->
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+
 </header>

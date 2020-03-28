@@ -1,4 +1,9 @@
-<%= form_for :search, url: search_path, method: :get do |f| %>
-  <%= f.text_field :term, placeholder: "Search here" %>
-  <%= f.submit "Search" %>
-<% end %>
+<section class="search">
+  <%= form_for :search,
+               url: search_path,
+               method: :get,
+               html: { class: "form-inline md-form mr-auto mb-4" } do |f| %>
+    <%= f.text_field :term, placeholder: "Search here", class: "form-control mr-sm-2" %>
+    <%= f.submit "Search", class: "btn aqua-gradient btn-rounded btn-sm my-0" %>
+  <% end %>
+</section>

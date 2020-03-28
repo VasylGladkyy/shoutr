@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
   
   root 'homes#show'
+  
+  resources :searches, only: :show
 
   post "text_shouts", to: "shouts#create", defaults: { content_type: TextShout }
   post "photo_shouts", to: "shouts#create", defaults: { content_type: PhotoShout }

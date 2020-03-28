@@ -1,6 +1,6 @@
 /.bundle
 .idea/
-
+solr/
 /log/*
 /tmp/*
 !/log/.keep

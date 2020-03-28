@@ -1,16 +1,18 @@
-<%= form_for :session, url: session_path do |form| %>
+<%= form_for :session,
+             url: session_path,
+             html: { class: "form-group" } do |form| %>
   <div class="text-field">
     <%= form.label :email_or_username %>
-    <%= form.text_field :email_or_username %>
+    <%= form.text_field :email_or_username, class: "form-control col-6" %>
   </div>
 
   <div class="password-field">
     <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password, class: "form-control col-6" %>
   </div>
 
   <div class="submit-field">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary mt-2 mb-2" %>
   </div>
 
   <div class="other-links">

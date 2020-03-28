@@ -3,14 +3,19 @@
 
   <p><%= t(".description") %></p>
 
-  <%= form_for :password, url: passwords_path do |form| %>
+  <%= form_for :password,
+               url: passwords_path,
+               html: { class: "form-group" } do |form| %>
     <div class="text-field">
       <%= form.label :email %>
-      <%= form.text_field :email, type: 'email' %>
+      <%= form.text_field :email,
+                          placeholder: "email",
+                          type: 'email',
+                          class: "form-control col-6" %>
     </div>
 
     <div class="submit-field">
-      <%= form.submit %>
+      <%= form.submit class: "btn btn-primary mt-2 mb-2" %>
     </div>
   <% end %>
 </div>

@@ -1,11 +1,27 @@
-<h1>Dashboard</h1>
+<section class="dashboard">
+  <h1>Dashboard</h1>
 
-<%= shout_form_for(TextShout) do |form| %>
-  <%= form.text_field :body, placeholder: "shout here", required: true %>
-<% end %>
+  <div class="text-shout">
+    <%= shout_form_for(TextShout) do |form| %>
+      <div class="col-3">
+        <%= form.text_field :body, placeholder: "shout here", required: true, class: "txt-field form-control" %>
+      </div>
+    <% end %>
+  </div>
+  <!-- /.text-shout -->
 
-<%= shout_form_for(PhotoShout) do |form| %>
-  <%= form.file_field :image, required: true %>
-<% end %>
+  <div class="photo-shout">
+    <%= shout_form_for(PhotoShout) do |form| %>
+      <div class="custom-file col-3">
+        <%= form.file_field :image, required: true, class: "custom-file-input" %>
+        <%= form.label :image, class: "custom-file-label" %>
+      </div>
+    <% end %>
+  </div>
+  <!-- /.photo-shout -->
 
-<%= render @dashboard.timeline %>
+  <div class="row">
+    <%= render @dashboard.timeline %>
+  </div>
+  <!-- /.timelines -->
+</section>

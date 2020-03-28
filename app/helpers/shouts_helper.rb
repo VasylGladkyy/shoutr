@@ -1,8 +1,8 @@
 module ShoutsHelper
   def shout_form_for(content_type)
-    form_for(Shout.new, url: content_type.new) do |form|
+    form_for(Shout.new, url: content_type.new, html: { class: "form-inline md-form mr-auto" }) do |form|
       form.fields_for(:content) { |content_form| yield(content_form) } +
-          form.submit("Shout!")
+          form.submit("Shout!", class: 'btn btn-primary ml-2')
       end
   end
   

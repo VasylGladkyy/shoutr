@@ -6,8 +6,7 @@ class Search
   end
   
   def run
-    #Sunspot.search([TextShout, PhotoShout]) { fulltext term }.results
-    ShoutSearchQuery.new(term: term).to_relation
+    ShoutSearchQuery.new(term: "#{term}").to_relation
   end
   
   alias results run

@@ -1,7 +1,7 @@
 class FollowersController < ApplicationController
   def index
     @user = find_user
-    @followers = @user.followers
+    @followers = @user.followers.paginate(page: params[:page], per_page: 15)
   end
   
   private

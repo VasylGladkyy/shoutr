@@ -16,6 +16,9 @@ gem "paperclip", "~> 6.0.0"
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
 
+gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

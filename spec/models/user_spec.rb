@@ -2,6 +2,26 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:user) { create(:user) }
+
+  describe 'associations' do
+    it { is_expected.to have_many(:shouts).dependent(:destroy) }
+    it { is_expected.to have_many(:likes) }
+    it { is_expected.to have_many(:liked_shouts).through(:likes).source(:shout) }
+    
+    it do is_expected.to have_many(:followed_user_relationships)
+                              .with_foreign_key(:follower_id)
+                             .class_name('FollowingRelationship')
+                             .dependent(:destroy)
+    end
+    it { is_expected.to have_many(:followed_users).through(:followed_user_relationships) }
+
+    it do is_expected.to have_many(:follower_relationships)
+                             .with_foreign_key(:followed_user_id)
+                             .class_name('FollowingRelationship')
+                             .dependent(:destroy)
+    end
+    it { is_expected.to have_many(:followers).through(:follower_relationships) }
+    end
   
   describe "validation test's" do
     it "be valid" do

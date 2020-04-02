@@ -5,9 +5,9 @@ module ApplicationHelper
   
   def session_link
     if signed_in?
-      link_to('Sign out', sign_out_path, method: :delete, class: "nav-link")
+      link_to('Sign out', sign_out_path, method: :delete, class: "nav-link", id: "sign-out")
     else
-      link_to('Sign in', sign_in_path, class: "nav-link")
+      link_to('Sign in', sign_in_path, class: "nav-link", id: "sign-in")
     end
   end
 end

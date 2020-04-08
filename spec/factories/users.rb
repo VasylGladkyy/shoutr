@@ -4,4 +4,8 @@ FactoryBot.define do
     email { Faker::Internet.safe_email }
     password { Faker::Internet.password }
   end
+
+  factory :admin, parent: :user do
+    role { 'admin' }
+  end
 end

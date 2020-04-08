@@ -1,0 +1,13 @@
+section.dashboard
+  h1 Dashboard
+  .text-shout
+    = shout_form_for(TextShout) do |form|
+      .col-3
+        = form.text_field :body, placeholder: "shout here", required: true, class: "txt-field form-control"
+  .photo-shout
+    = shout_form_for(PhotoShout) do |form|
+      .custom-file.col-3
+        = form.file_field :image, required: true, class: "custom-file-input"
+        = form.label :image, class: "custom-file-label"
+  .row
+    = render @dashboard.timeline

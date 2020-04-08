@@ -1,0 +1,7 @@
+section.search
+  = form_for :search,
+    url: search_path,
+    method: :get,
+    html: {class: "form-inline md-form mr-auto mb-4"} do |f|
+    = f.text_field :term, placeholder: "Search here", class: "form-control mr-sm-2", id: "term"
+    = f.submit "Search", class: "btn aqua-gradient btn-rounded btn-sm my-0"

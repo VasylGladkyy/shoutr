@@ -1,0 +1,9 @@
+.shout.col-6
+  .shout-title
+    = avatar shout.user
+    = link_to shout.username + ' ', shout.user
+    = link_to shout do
+      = time_ago_in_words(shout.created_at) + ' ago'
+  .shout-body
+    = render shout.content
+  = like_button shout

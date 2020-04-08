@@ -1,0 +1,14 @@
+#clearance.password-reset
+  h2= t(".title")
+  p= t(".description")
+  = form_for :password,
+    url: passwords_path,
+    html: { class: "form-group" } do |form|
+    .text-field
+      = form.label :email
+      = form.text_field :email,
+        placeholder: "email",
+        type: 'email',
+        class: "form-control col-6"
+    .submit-field
+      = form.submit class: "btn btn-primary mt-2 mb-2"

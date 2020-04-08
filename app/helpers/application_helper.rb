@@ -10,4 +10,10 @@ module ApplicationHelper
       link_to('Sign in', sign_in_path, class: "nav-link", id: "sign-in")
     end
   end
+  
+  def users_link
+    if signed_in? && current_user.admin?
+      link_to('Users', users_path, class: "nav-link")
+    end
+  end
 end

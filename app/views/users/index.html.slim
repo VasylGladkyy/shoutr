@@ -1,0 +1,18 @@
+h2 Users
+table.table.mb-5
+  thead.thead-dark
+    tr
+      th scope="col" User
+      th scope="col" Username
+      th scope="col" Role
+      th scope="col" Email
+      th scope="col" Create at
+  tbody
+    - @users.each do |user|
+      tr
+        td = link_to avatar(user), user
+        td = link_to user.username, user
+        td = user.role
+        td = user.email
+        td = user.created_at.strftime("%F")
+  = will_paginate

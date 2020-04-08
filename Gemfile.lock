@@ -148,6 +148,8 @@ GEM
     popper_js (1.16.0)
     public_suffix (4.0.3)
     puma (3.12.4)
+    pundit (2.1.0)
+      activesupport (>= 3.0.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -223,6 +225,9 @@ GEM
       tilt
     shoulda-matchers (4.3.0)
       activesupport (>= 4.2.0)
+    slim (4.0.1)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -234,6 +239,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.2)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.0.1)
@@ -279,11 +285,13 @@ DEPENDENCIES
   paperclip (~> 6.0.0)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
+  pundit
   rails (~> 5.2.4, >= 5.2.4.2)
   rails-controller-testing
   rspec-rails (~> 4.0.0)
   sass-rails (~> 5.0)
   shoulda-matchers
+  slim
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

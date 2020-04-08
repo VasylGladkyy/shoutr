@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   include Clearance::User
   
+  enum role: %i[admin customer]
+  
   has_many :shouts, dependent: :destroy
   
   has_many :likes

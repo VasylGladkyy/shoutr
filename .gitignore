@@ -15,3 +15,4 @@ solr/
 .byebug_history
 
 /config/master.key
+coverage

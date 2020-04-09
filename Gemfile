@@ -40,6 +40,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner-active_record'
   gem 'rails-controller-testing'
+  gem 'simplecov', require: false
   gem 'shoulda-matchers'
 end
 

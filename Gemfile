@@ -14,7 +14,7 @@ gem 'puma', '~> 3.11'
 gem 'pundit'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'sass-rails', '~> 5.0'
-gem 'slim'
+gem "slim-rails"
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'

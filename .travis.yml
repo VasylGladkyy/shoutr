@@ -11,8 +11,6 @@ install:
   - bundle
 before_script:
   - rake db:setup
-script:
-  - bundle exec rspec
 services:
   - postgresql
   - xvfb

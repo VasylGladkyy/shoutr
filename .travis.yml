@@ -1,0 +1,17 @@
+dist: xenial
+rvm:
+  - 2.5.5
+cache:
+  bundler: true
+language: ruby
+env:
+  global:
+    - RAILS_ENV=test
+install:
+  - bundle
+before_script:
+  - rake db:setup
+script:
+  - bundle exec rspec
+services:
+  - postgresql

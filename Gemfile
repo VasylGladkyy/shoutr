@@ -13,6 +13,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
 gem 'pundit'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
+gem 'rubocop-rails', require: false
 gem 'sass-rails', '~> 5.0'
 gem "slim-rails"
 gem 'turbolinks', '~> 5'

@@ -10,6 +10,7 @@ before_script:
   - rake db:setup
 script:
   - bundle exec rspec
+  - bundle exec rubocop --safe-auto-correct
 services:
   - postgresql
   - xvfb

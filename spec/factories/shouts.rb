@@ -6,7 +6,7 @@ FactoryBot.define do
   factory :photo_shout do
     # Todo
   end
-  
+
   factory :shout do
     user { create(:user) }
     content { create(:text_shout) }

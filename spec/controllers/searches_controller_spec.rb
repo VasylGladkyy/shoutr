@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SearchesController, type: :controller do
   let(:shout) { create(:shout) }
-  
+
   describe 'Get #show' do
     subject { get :show, params: { search: { term: shout.content.body } } }
 

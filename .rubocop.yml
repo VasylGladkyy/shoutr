@@ -1,1 +1,73 @@
 require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - "bin/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+
+Rails/ApplicationRecord:
+  Exclude:
+    - "db/migrate/*"
+
+Rails/BulkChangeTable:
+  Exclude:
+    - "db/migrate/*"
+Rails/CreateTableWithTimestamps:
+  Exclude:
+    - "db/migrate/*"
+
+Rails/InverseOf:
+  Exclude:
+    - "app/models/user.rb"
+
+Layout/LineLength:
+  Max: 90
+  IgnoredPatterns:
+    - '\A(\s)*#'
+  Exclude:
+    - "app/helpers/*"
+    - "db/migrate/*"
+    - "spec/**/*"
+
+Metrics/AbcSize:
+  Exclude:
+    - "db/migrate/*"
+    - "spec/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "db/schema.rb"
+    - "config/environments/*.rb"    
+    - "config/routes.rb"
+
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*"
+    - "app/helpers/*"
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/OutputSafety:
+  Exclude:
+    - "app/helpers/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
+
+Lint/UselessAssignment:
+  Exclude:
+    - "spec/support/features/clearance_helpers.rb"
+
+Naming/MemoizedInstanceVariableName:
+  Exclude:
+  - "app/controllers/*"

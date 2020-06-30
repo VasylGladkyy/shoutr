@@ -6,15 +6,15 @@ RSpec.describe FollowedUsersController, type: :controller do
     @user_to_follow = create(:user)
     sign_in_as(@user)
   end
-  
-  describe "Post #create" do
+
+  describe 'Post #create' do
     subject { post :create, { params: { id: @user_to_follow.username } } }
 
     it { is_expected.to have_http_status(:redirect) }
     it { is_expected.to redirect_to(@user_to_follow) }
   end
 
-  describe "Delete #destroy" do
+  describe 'Delete #destroy' do
     subject { post :destroy, { params: { id: @user_to_follow.username } } }
 
     it { is_expected.to have_http_status(:redirect) }

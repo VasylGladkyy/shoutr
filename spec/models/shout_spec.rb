@@ -10,10 +10,9 @@ RSpec.describe Shout, type: :model do
 
   describe 'validations' do
     it { is_expected.to validate_presence_of(:user) }
-    
-    it "be valid" do
+
+    it 'be valid' do
       expect(shout).to be_valid
     end
   end
-  
 end
